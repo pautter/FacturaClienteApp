@@ -1,0 +1,193 @@
+/*PALETA 1:root{
+    --color-1:#6b9080;
+    --color-2:#a4c3b2;
+    --color-3:#cce3de;
+    --color-4:#eaf4f4;
+    --color-5:#f6fff8;
+
+}*/
+
+/*PALETA 2:root{
+    --color-1:#606c38;
+    --color-2:#283618;
+    --color-3:#fefae0;
+    --color-4:#dda15e;
+    --color-5:#bc6c25;
+
+}
+
+/*PALETA 3:root{
+    --color-1:#000000;
+    --color-2:#14213d;
+    --color-3:#fca311;
+    --color-4:#e5e5e5;
+    --color-5:#ffffff;
+
+}
+
+/*PALETA 4*/:root{
+    --color-1:#b2967d;
+    --color-2:#e6beae;
+    --color-3:#e7d8c9;
+    --color-4:#eee4e1;
+    --color-5:#ecf8f8;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    /*background-color: #292828;*/
+    background-image: url(../img/fondo.png);
+    /*background-image: url(https://www.hola.com/horizon/landscape/b6b1487765b9-cocinas-madera-modernas-11t-t.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body, .nav, .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    position: relative;
+    background-color: #fff;
+    padding: 25px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ .menu {
+    width: 800px;
+}
+
+.menu li { 
+    list-style: none;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+    text-align: center;
+    font-size: 20px;
+}
+
+.nav input {
+    width: 40px;
+    height: 10px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.nav span {
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #666;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ span {
+    background-color: #f974a1;
+}
+
+.nav span:nth-child(2) {
+    transform: translateY(-8px);
+}
+
+.nav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.nav span:nth-child(3) {
+    transform: translateY(8px);
+}
+
+.nav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.nave:hover{
+    scale: 1.2;
+}
+
+.Titulo,.subtitulo{
+    color: white;
+    background-color: black;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+
+.container {
+  display: flex;
+/*   border:1px solid red; */
+  height: 100%;
+  align-items: center;
+}
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: var(--color-1);
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: var(--color-2);
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: var(--color-3);
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke:var(--color-4);
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: var(--color-5);
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
