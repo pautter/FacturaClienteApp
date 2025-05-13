@@ -1,0 +1,12 @@
+body{
+    background-color:#323639 ;
+    margin-left: 2%;
+    width: unset;
+    align-content: center;
+    text-align: center;
+}
+input{
+    width: 100px;
+    align-items: center;
+    align-content: center;
+}
